@@ -4,8 +4,6 @@
 
 #### By _**Asia Kane**_
 
-#### View Project at:
-
 ![Homepage](./app/assets/images/homepage.png)
 
 ## Description
