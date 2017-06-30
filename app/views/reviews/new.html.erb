@@ -6,6 +6,7 @@
   <%= f.label :content %>
   <%= f.text_field :content, class: :"form-control" %>
   <%= f.label :rating %>
-  <%= f.text_field :rating, class: :"form-control" %>
+  <%= f.select :rating, options_for_select([['', 0],['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5],]) %>
+  <br>
   <%= f.submit  %>
 <% end %>
