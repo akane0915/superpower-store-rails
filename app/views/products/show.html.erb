@@ -1,3 +1,11 @@
 <h1><%= @product.name %></h1>
+<p>Price: $<%= @product.price %></p>
+<p>Country of Origin: <%= @product.country %></p>
 
+<p><%= link_to "Edit Super Power", edit_product_path(@product) %></p>
+<p><%= link_to "Delete", product_path(@product),
+                         :data => {:confirm => "You sure you want to delete? Super powers are hard to come by!",
+                                   :method => "delete"} %></p>
+
+<hr>
 <p><%= link_to "Return to products", products_path %></p>
