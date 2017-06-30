@@ -1,0 +1,10 @@
+<h1>Super Powers</h1>
+<h3>Get 'Em While They're Hot!</h3>
+
+<ul>
+  <% @products.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "New Super Power", new_product_path %>
