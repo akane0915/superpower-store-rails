@@ -6,7 +6,7 @@
 
 #### View Project at:
 
-![Homepage](homepage.png)
+![Homepage](./app/assets/images/homepage.png)
 
 ## Description
 
