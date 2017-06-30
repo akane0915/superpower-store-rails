@@ -25,6 +25,14 @@ This is an application to manage the products and reviews for each product at As
 * As a user, I'd like to filter to see products made in the USA.
 * As a user, I'd like to see sample data (50 products, 250 reviews) so that I can better evalute the application.
 
+Additional Features:
+
+* Ability to sort products alphabetically
+* App displays average rating on product detail page
+* Flash messages for CRUD functionality
+* Error messages when creating and updating products and reviews
+* Error message when filter returns no results
+
 The application structure is outlined below.  
 
 Models:
@@ -79,9 +87,6 @@ Run `rspec` in terminal to test.
 * CSS
 * Bootstrap
 * ES6
-
-## Screen Shots
-
 
 ## Known Bugs
 _N/A_
