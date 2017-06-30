@@ -70,7 +70,8 @@ Run `rspec` in terminal to test.
 
 * Ruby
 * Rails
-* Postgress
+* ActiveRecord
+* Postgres
 * Bundler
 * Rake Gem
 * Rspec
