@@ -3,4 +3,13 @@ class Product < ActiveRecord::Base
 
   validates :name, :price, :country, presence: true
   validates :name, uniqueness: true
+
+  scope :alphabetical, -> {( order(name: :asc))}
+
+  scope :most_reviews, -> {(
+    select("products.id, products.*, count(reviews.id) as reviews_count")
+    .joins(:reviews)
+    .group("products.id")
+    .order("reviews_count DESC")
+    )}
 end
