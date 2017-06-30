@@ -12,6 +12,7 @@
 <%= link_to "Show 3 Newest Super Powers", products_path(sort_by: "three_most_recent")%>
 <br>
 <%= link_to "Show Products home grown in the U S of A", products_path(sort_by: "country")%>
+<br><br>
 
 <ul>
   <% @products.each do |product| %>

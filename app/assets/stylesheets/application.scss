@@ -14,3 +14,23 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: 'Inconsolata', monospace;
+  padding-bottom: 50px;
+}
+
+ .jumbotron {
+   background-image: url('jumbotron.jpeg');
+   min-height: 500px;
+   h1 {
+     color: white;
+     text-align: center;
+     font-family: 'Dancing Script', cursive;
+     font-size: 8em;
+   }
+ }
+
+ li {
+   padding: 10px 0;
+ }
