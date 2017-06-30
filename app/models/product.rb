@@ -17,4 +17,12 @@ class Product < ActiveRecord::Base
 
   scope :country, -> { where(country: "USA") }
 
+  def avg_rating(product)
+    ratings = []
+    product.reviews.each do |review|
+      ratings.push(review.rating)
+    end
+    average = (ratings.inject(:+) / ratings.length)
+  end
+
 end

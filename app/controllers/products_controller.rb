@@ -4,11 +4,16 @@ class ProductsController < ApplicationController
       @products = Product.alphabetical
     else
       @products = Product.send(params[:sort_by])
+      if Product.send(params[:sort_by]) == []
+        flash[:notice] = "No results returned.  Choose another filter!"
+      end
+
     end
   end
 
   def show
     @product = Product.find(params[:id])
+    @product_rating = @product.avg_rating(@product)
   end
 
   def new
