@@ -5,8 +5,6 @@ class ProductsController < ApplicationController
     else
       @products = Product.send(params[:sort_by])
     end
-
-
   end
 
   def show
