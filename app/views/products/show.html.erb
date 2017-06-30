@@ -2,8 +2,31 @@
 <p>Price: $<%= @product.price %></p>
 <p>Country of Origin: <%= @product.country %></p>
 
+<% if @product.reviews.any? %>
+  <h4>Reviews:</h4>
+
+  <ul>
+    <% @product.reviews.each do |review| %>
+      <li>
+        <p>Author: <%= review.author %></p>
+        <p>Rating: <%= review.rating %></p>
+        <p><%= review.content %></p>
+        <%= link_to "Delete Review", product_review_path(@product, review),
+                                 :data => {:confirm => "Are you sure?",
+                                                :method => "delete"} %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no reviews yet!</p>
+<% end %>
+
+<p><%= link_to "Write a review and good karma will follow...", new_product_review_path(@product) %></p>
+
+<hr>
+
 <p><%= link_to "Edit Super Power", edit_product_path(@product) %></p>
-<p><%= link_to "Delete", product_path(@product),
+<p><%= link_to "Delete Super Power", product_path(@product),
                          :data => {:confirm => "You sure you want to delete? Super powers are hard to come by!",
                                    :method => "delete"} %></p>
 
