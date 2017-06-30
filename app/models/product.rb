@@ -12,4 +12,9 @@ class Product < ActiveRecord::Base
     .group("products.id")
     .order("reviews_count DESC")
     )}
+
+  scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
+
+  scope :country, -> { where(country: "USA") }
+
 end
