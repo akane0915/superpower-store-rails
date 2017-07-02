@@ -8,7 +8,7 @@
 
 ## Description
 
-This is an application to manage the products and reviews for each product at Asia's SuperPower Store. It fulfills the following user stories:
+This is an application to manage the products and reviews for each product at Asia's SuperPower Store. It includes user authentication using the bcrypt gem.  It fulfills the following user stories:
 
 * As a user, I'd like to visit the homepage to see a brief description of the company and list of all products.
 * As a user, I'd like to click on a product to visit its detail page including details product name, cost, country of origin, and product reviews.
@@ -25,6 +25,8 @@ This is an application to manage the products and reviews for each product at As
 
 Additional Features:
 
+* Ability to create a user account, sign in, and sign out.
+* Only authorized users can create, update, and delete products when signed in.
 * Ability to sort products alphabetically
 * App displays average rating on product detail page
 * Flash messages for CRUD functionality
@@ -80,6 +82,7 @@ Run `rspec` in terminal to test.
 * Postgres
 * Bundler
 * Rake Gem
+* Bcrypt Gem
 * Rspec
 * HTML
 * CSS
