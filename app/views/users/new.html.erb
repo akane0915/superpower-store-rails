@@ -1,0 +1,15 @@
+<h1> Sign up for an account</h1>
+<%= form_for @user do |f| %>
+  <%= f.label "Email" %>
+  <br>
+  <%= f.text_field :email %>
+  <br>
+  <%= f.label "Password (Must be at least 6 characters and include one number and one letter)" %>
+  <%= f.password_field :password %>
+  <br>
+  <%= f.label :password_confirmation %>
+  <br>
+  <%= f.password_field :password_confirmation %>
+  <br>
+  <%= f.submit "Create Account" %>
+<% end %>

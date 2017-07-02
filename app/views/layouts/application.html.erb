@@ -10,12 +10,23 @@
   </head>
 
   <body>
+    <% if current_user %>
+    <%= current_user.email %> | <%= link_to "Sign out", '/signout' %> | <%= link_to "Home", products_path %>
+    <% else %>
+    <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %> | <%= link_to "Home", products_path %>
+    <% end %>
+
     <div class="jumbotron">
       <h1>Asia's Super Power Store</h1>
     </div>
     <div class="container">
+
+
       <%= flash[:notice] %>
+      <%= flash[:alert] %>
+
       <%= yield %>
+
     </div>
   </body>
 </html>
