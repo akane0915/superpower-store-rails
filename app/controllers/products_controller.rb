@@ -1,11 +1,13 @@
 class ProductsController < ApplicationController
+  before_action :authorize, only: [:new, :create, :edit, :update, :destroy]
+
   def index
     if params[:sort_by] == nil
       @products = Product.alphabetical
     else
       @products = Product.send(params[:sort_by])
       if Product.send(params[:sort_by]) == []
-        flash[:notice] = "No results returned.  Choose another filter!"
+        flash[:alert] = "No results returned.  Choose another filter!"
       end
 
     end
